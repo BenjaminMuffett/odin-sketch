@@ -1,0 +1,14 @@
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    
+}
+
+.block {
+    border: 1px solid black;
+    flex: auto;
+    width: 20px;
+    height: 20px;
+}
+
