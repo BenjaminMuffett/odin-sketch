@@ -16,11 +16,6 @@ btn.addEventListener("click", () => {
   generateCanvas(sideLength);
 });
 
-// for (let i = 0; i < sideLength**2; i++) {
-//     const canvas = document.createElement('div')
-//     canvas.classList.add('canvas')
-//     grid.appendChild(canvas)
-// }
 function generateCanvas(sideLength) {
   for (let i = 0; i < sideLength; i++) {
     const canvasLine = document.createElement("div");
@@ -35,11 +30,14 @@ function generateCanvas(sideLength) {
   const trail = document.querySelectorAll(".block");
   trail.forEach((block) => {
     block.addEventListener("mouseover", () => {
-      block.style.background = "black";
+      block.style.background = createRandomColour();
     });
   });
 }
-
-// trail.addEventListener('mouseover', (event) => {
-//     event.target.style.color = 'black'
-// })
+// set block.style.background = 'black' for only black/white
+function createRandomColour() {
+    return `rgb(${randomValue()},${randomValue()},${randomValue()})`
+}
+function randomValue() {
+    return Math.floor(Math.random() * 255) + 1;
+}
