@@ -18,3 +18,16 @@ for (let i = 0; i < sideLength; i++) {
     }
     grid.appendChild(canvasLine)
 }
+
+const trail = document.querySelectorAll('.block')
+trail.forEach((block) => {
+   block.addEventListener('mouseover', () => {
+    block.style.background = 'black'}) 
+});
+
+
+
+
+// trail.addEventListener('mouseover', (event) => {
+//     event.target.style.color = 'black'
+// })
